@@ -1,8 +1,14 @@
-@extends('layouts.site')
+@extends('layouts.site'):wq
+:
 
-@section('content')
-    <header class="common-header">
-        <div class="header-wrapper">
+:qw
+
+
+
+
+iiwq
+iiiiiiaskdj~lsdh/bjv cxnz.çmlmkç!!!
+::::::::e@wr">
             <h1 class="title-large">With apples drink teriyaki. </h1>
         </div>
         <div class="pattern__header"></div>
