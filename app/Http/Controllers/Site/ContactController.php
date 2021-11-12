@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Site;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use App\Notifications\NewContact;
-use Illuminate\Http\Request;
+use App\Http\Requests\ContactFormRequest;
 use Illuminate\Support\Facades\Notification;
 
 
@@ -21,13 +21,21 @@ class ContactController extends Controller
         return view('site.contact.index');
     }
 
-   public function form(Request $request){
+   public function form(ContactFormRequest $request){
 
         $contact = Contact::create($request->all());
 
       //  Notification::route('mail', config('mail.from.address'))
       //     ->notify(new NewContact($contact));
 
-        ddd($contact);
+     //  return redirect()->route('site.contact')->with([
+      //     'sucess' => 'true',
+      //     'message' => 'Obrigado por cadastrar seu contato'
+     //  ]);
+
+       toastr()->success('Obrigado por cadastrar seu contato', 'Sucesso!!');
+       return back();
+
+       // ddd($contact);
     }
 }
