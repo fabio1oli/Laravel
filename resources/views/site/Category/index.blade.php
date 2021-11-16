@@ -1,14 +1,6 @@
-@extends('layouts.site'):wq
-:
+@extends('layouts.site')
 
-:qw
-
-
-
-
-iiwq
-iiiiiiaskdj~lsdh/bjv cxnz.çmlmkç!!!
-::::::::e@wr">
+@section('content')
             <h1 class="title-large">With apples drink teriyaki. </h1>
         </div>
         <div class="pattern__header"></div>
