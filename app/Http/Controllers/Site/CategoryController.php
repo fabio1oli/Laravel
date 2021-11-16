@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -14,7 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('site.category.index');
+
+        return view('site.category.index',['categories'=>Category::all()]);
     }
 
     /**
@@ -41,12 +43,12 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  string  $slug
+     * @param  string  Category usando routing binding
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show(Category $category)
     {
-        return view('site.category.show',['slug'=>$slug]);
+        return view('site.category.show',['category'=>$category]);
     }
 
     /**
